@@ -61,11 +61,12 @@ class SubArray{
     
 }
 
+
 //? Max sum of 3 length subArray
 
 class SubArray3 {
     public static void main(String[] args) {
-      int arr[] = {5, 9, 1, 8, 7};
+      int arr[] = {1,2,3,4};
       int sl = 3;
       subArray(arr, sl);
       
@@ -74,7 +75,7 @@ class SubArray3 {
     public static void subArray(int[] arr, int sl) {
       int n = arr.length;
       int ans = 0;
-      for (int i = 0; i < n-sl; i++) {
+      for (int i = 0; i < n-sl+1; i++) {
         int j = i+sl-1;
         int temp = 0;
         for(int k=i; k<=j;k++){
@@ -87,12 +88,11 @@ class SubArray3 {
     }
 }
 
-
 //?  Sliding Window
 
 class SlidingWindow{
     public static void main(String[] args) {
-        int arr[] = {5, 9, 1, 8, 7};
+        int arr[] = {1,2,3,4};
         int n = arr.length;
         int sl = 3;
         int ans = 0;
@@ -115,3 +115,9 @@ class SlidingWindow{
         System.out.println(ans);
     }
 }
+
+
+//? --> Leet Code
+//!---> 1876. Substrings of Size Three with Distinct Characters
+
+
