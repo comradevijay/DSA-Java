@@ -2,12 +2,12 @@ import java.util.*;
 
 class Main {
   public static void main(String[] args) {
-    int[] arr = { 1, 4, 2, 7, 5, 9 };
+    int[] arr = {2,3,4};
     int n = arr.length;
 
-    // System.out.println(secLargest(arr, n)); //! Second Largest
+    System.out.println(secLargest(arr, n)); //! Second Largest
 
-    int[] nums = { 3, 2, 4 };
+    int[] nums = {2,3,4};
     int target = 6;
 
     // System.out.println(Arrays.toString(twoSum(nums, n , target))); //! Two sum
@@ -26,7 +26,7 @@ class Main {
 
     int[] list = { 1, 4, 2, 4, 5, 2, 3};
 
-    System.out.println(allDups(list));
+    // System.out.println(allDups(list));
 
   }
 
@@ -37,9 +37,10 @@ class Main {
     int secLargest = Integer.MIN_VALUE;
     for (int i = 0; i < n; i++) {
       if (arr[i] > largest) {
+        secLargest = largest;
         largest = arr[i];
       } else if (arr[i] > secLargest && arr[i] < largest) {
-        secLargest = largest;
+        secLargest = arr[i];
       }
     }
     return secLargest;
